@@ -1,0 +1,14 @@
+{
+  "server_port" : 5000,
+  "db": {
+    "host": "207.154.205.241",
+    "user": "bright",
+    "database": "bright",
+    "password": "8/d9(E5Kip/NSBgO",
+    "waitForConnections": true,
+    "connectionLimit": 10,
+    "queueLimit": 0
+  }
+}
+
+

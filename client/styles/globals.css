@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.h-screen {
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+}
+.grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.gap-4 {
+    grid-gap: 2rem;
+}
+
+.col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.col-span-1	{
+    grid-column: span 1 / span 1;
+}
+
+.bg-neutral-900	{
+    background-color: rgb(23 23 23);
+}
+
+.flex {
+    display: flex;
+}
+
+.w-max	{
+    width: max-content;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.menu,
+.content {
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.menu-item {
+    transition: .3s;
+    border-left: 4px solid #262626;
+}
+
+.menu-item:hover {
+    border-left: 4px solid rgb(37 99 235);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(37 99 235);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(13, 56, 152);
+}
+
+@media (max-width: 780px) {
+    /*.menu {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.header {*/
+    /*    justify-content: space-between;*/
+    /*}*/
+
+
+
+}
