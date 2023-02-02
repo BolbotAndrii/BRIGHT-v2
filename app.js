@@ -44,8 +44,6 @@ app.use('/api/admin', require('./routes/admin.panel.route'))
 
 const serverStart = async () => {
     try {
-
-
         await app.listen( PORT, () => console.log(`Started at port: ${PORT}`) )
 
     } catch (err) {
