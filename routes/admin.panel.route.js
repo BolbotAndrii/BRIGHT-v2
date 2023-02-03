@@ -3,7 +3,7 @@ const {getAdminMenuTree} = require('../controllers/admin.panel.controller')
 
 const router = Router()
 
-router.get(
+router.post(
     '/sidebar',
     getAdminMenuTree
 )

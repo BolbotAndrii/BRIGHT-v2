@@ -3,19 +3,13 @@ const {connection} = require('../db')
 
 const getAdminMenuTree = async (req, res) => {
     try {
-        await connection.promise().query('SELECT * FROM `admin_sidebar`')
+        const {lang} = req.body
+        const title = 'title_'+lang
+        const queryString = "SELECT  id, "+ title +" as title, type, path, icon, sort, depth, active  FROM `admin_sidebar`"
+
+        await connection.promise().query(queryString)
             .then((results) => {
-
-                let arrMenu = []
-                results[0].forEach( item => {
-                    if( item.depth !== 1 && item.parent_id == item.id) {
-                        item.push()
-                    }
-                })
-                console.log(arrMenu)
-                // return res.status(200).json(results[0])
-
-
+                return res.status(200).json(results[0])
             }).catch(e => {
                 return res.status(400).json({message: `${e}`})
             })
