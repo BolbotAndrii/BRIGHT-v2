@@ -14,12 +14,16 @@ const PORT = config.get('server_port') || 6000
 
 // set json
 
+
+
+
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
 app.use('/api/group', require('./routes/group.route'))
 app.use('/api/admin', require('./routes/admin.panel.route'))
+
 // app.use('/api/user', require('./routes/user.route'))
 // app.use('/api/permissions', require('./routes/permissions.route'))
 //

@@ -3,6 +3,44 @@
 @tailwind utilities;
 
 
+
+:root {
+    /*bg*/
+    --main-color-bg-w: rgb(28 149 202);
+    --main-color-bg-hover-w: rgb(7, 140, 199);
+    --main-color-bg-hover-secondary-w: rgba(189, 189, 189, 0.55);
+    --main-btn-color-bg-w: #223651;
+    /*text*/
+    --main-color-text-w: #ffffff;
+    --main-color-text-hover-w: rgb(119 185 212);
+
+    /*--main-hover-color-w: #0081c7;*/
+    --main-menu-color-w: #223651;
+
+
+    --main-footer-color-w: #080f18;
+}
+
+
+* {
+    transition: .05s;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+#__next {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+}
+
 .h-screen {
     height: 100vh;
 }
@@ -12,6 +50,10 @@
 }
 .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-3-custom {
+    grid-template-rows: 32px 80px 56px;
 }
 
 .grid-cols-5 {
@@ -67,7 +109,11 @@
     border-left: 4px solid #262626;
 }
 
-.menu-item:hover {
+/*.menu-item:hover {*/
+/*    border-left: 4px solid rgb(37 99 235);*/
+/*}*/
+
+.menu-item.active {
     border-left: 4px solid rgb(37 99 235);
 }
 
@@ -84,13 +130,104 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(37 99 235);
+    background:var(--main-color-bg-w);
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(13, 56, 152);
+}
+
+.shop-container {
+    width: 100%;
+}
+
+.shop-content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.shop-top-ads {
+    background-color: var(--main-color-bg-w);
+    height: 100%;
+}
+.shop-catalog-menu {
+    background-color: var(--main-menu-color-w);
+}
+
+.shop-search-btn {
+    background-color: var(--main-color-bg-w);
+}
+
+.shop-fav-btn,
+.shop-basket-btn,
+.shop-login-btn ,
+.shop-catalog-menu-btn {
+    color: var(--main-color-text-w)
+}
+
+.shop-catalog-menu:hover,
+.shop-header-lang a:hover,
+.shop-info-menu li:hover,
+.shop-catalog-menu-btn:hover,
+.shop-fav-btn:hover,
+.shop-basket-btn:hover,
+.shop-login-btn:hover {
+    color: var(--main-color-text-hover-w)
+}
+
+
+.shop-catalog-menu-btn:hover,
+.shop-fav-btn:hover,
+.shop-basket-btn:hover,
+.shop-login-btn:hover {
+    fill: var(--main-color-text-hover-w)
+}
+
+
+
+
+.shop-header-lang a {
+    margin-right: .6rem;
+    padding-right: .6rem;
+    border-right: 1px dashed #44403c;
+}
+
+.shop-header-lang a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+.shop-slider {
+    height: 400px;
+    width: 100%;
+}
+
+.shop-catalog-menu-sections a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .6rem 1rem .6rem 1rem;
+}
+
+.shop-catalog-menu-sections a:hover {
+    background-color: var(--main-color-bg-hover-secondary-w);
+}
+
+.shop-btn-buy {
+    background-color: var(--main-btn-color-bg-w);
+}
+
+.shop-btn-order {
+    background-color: var(--main-btn-color-bg-w);
+}
+
+.shop-footer {
+    background-color: var(--main-footer-color-w);
 }
 
 @media (max-width: 780px) {

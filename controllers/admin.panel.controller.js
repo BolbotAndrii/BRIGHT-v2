@@ -5,9 +5,9 @@ const getAdminMenuTree = async (req, res) => {
     try {
         const {lang} = req.body
         const title = 'title_'+lang
-        const queryString = "SELECT  id, "+ title +" as title, type, path, icon, sort, depth, active  FROM `admin_sidebar`"
+        const queryString = "SELECT  id, "+ title +" as title, type, path, icon, sort, depth, active  FROM `admin_sidebar` WHERE active=?"
 
-        await connection.promise().query(queryString)
+        await connection.promise().query(queryString, 'true')
             .then((results) => {
                 return res.status(200).json(results[0])
             }).catch(e => {

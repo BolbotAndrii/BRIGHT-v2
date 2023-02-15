@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LangChange = () => {
+const CatalogSort = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const LangChange = () => {
     );
 };
 
-export default LangChange;
+export default CatalogSort;

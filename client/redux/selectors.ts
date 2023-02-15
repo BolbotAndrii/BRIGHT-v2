@@ -1,0 +1,1 @@
+export const getMenuState = ( state:any ) => state?.common.toggleMenu.isOpen

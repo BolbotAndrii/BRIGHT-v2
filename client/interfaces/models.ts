@@ -1,20 +1,26 @@
 
 //sidebar
 export interface IMenu {
-    id: number,
-    label: string,
-    type: string,
-    path: string,
+    active: string,
+    depth: number,
     icon: string,
-    secondDepth: ISDepth[]
+    id: number,
+    path: string,
+    title: string,
+    type: string,
+    sDepth: [
+        {
+            active: string,
+            depth: number,
+            icon: string,
+            id: number,
+            path: string,
+            title: string,
+            type: string,
+        }
+    ]
 }
 
-export interface ISDepth {
-    id: number,
-    label: string,
-    path: string,
-    icon: string
-}
 
 export interface IOrderWidget {
 
